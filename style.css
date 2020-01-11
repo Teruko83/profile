@@ -47,6 +47,7 @@ a:hover {
 .flex {
   display:flex;
   justify-content:space-between;
+  align-items: flex-start;
 }
 
 .card-white {
@@ -131,6 +132,11 @@ a:hover {
 
 
 /* Design adjustments using id (1% design remaining) */
+#text_story
+{
+  padding-left: 20px;
+}
+
 #introduction p {
   margin-bottom: 40px;
   text-align: left
