@@ -4,40 +4,74 @@
     <title>My profile</title>
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,500,700,900" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:700&display=swap" rel="stylesheet">
+    <link rel=“shortcut icon” href=“data:image/x-icon;” type=“image/x-icon”>
+    <link rel=“stylesheet” href=“https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css“>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
   </head>
      <body>
+      <h2 class=“text-center”>Do the race!</h2>
+   <hr>
+   <!-- You race HTML code here -->
+   <table class=“racer_table”>
+     <tr id=“player1_race”>
+       <td class=“active”></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td class=“last-td”></td>
+     </tr>
+     <tr id=“player2_race”>
+       <td class=“active”></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td class=“last-td”></td>
+     </tr>
+   </table>
+   <hr>
     <div class="container">
-      <div class="card-white" id="introduction">
-        <h1>Hi, I'm Aurelie </h1>
-        <img class="img-radius" src="./images/IMG_0515.jpg" width="200px" alt="Aurelie Mathys">
 
-          <h3>Junior web developer</h3>
+
+      <div class="card-white" >
+        <ul class='list-inline'>
+          <li><a href="#" class="btn-black">My story</a></li>
+          <li><a href="#" class="btn-black">My work</a></li>
+          <li><a href="#" class="btn-black">Contact</a></li>
+        </ul>
+
+        <h1>AURELIE MATHYS </h1>
+          <h3>COMMUNICATION ADVISOR - </h3>
+          <h3>WEB DEVELOPER</h3>
+
+          <img class="img-radius" src="./images/IMG_0515.jpg" width="200px" alt="Aurelie Mathys">
+          <h3>My story</h3>
            <p>I have 10 years experience in communication and marketing,
-          especially in copywriting and business strategy.
-          My passion for IT and especially new technologies led me to become a full-stack web developer.
-        </p>
-        <a href="#" class="btn-blue">My portfolio </a>
+              especially in copywriting and business strategy.
+              My passion for IT and especially new technologies led me to become a full-stack web developer.
+           </p>
+
       </div>
 
       <div class="card-white">
-        <h3>My passions</h3>
-        <div class="flex">
-         <div class="content"><img src="./images/GPTempDownload.JPG" width="100px" alt="Aurelie Mathys">
-         </div>
-
-         <div><p>Far away from the smog of the city,
-              I like to play the mermaid in the big blue.
-              While not coding, I am a Master Scuba Diver Instructor.</p>
-         </div>
-        </div>
+        <h3>My work</h3>
+          <ul class='list-inline'>
+            <li><a href="https://babynb.herokuapp.com/" target=_blank>Baby & B</a></li>
+            <li><a href="https://thomas-tracking.herokuapp.com/" target=_blank class="btn-black">Thomas tracking</a></li>
+          </ul>
       </div>
 
       <div class="card-white">
-        <h2>Follow me</h2>
+        <h2>Contact</h2>
         <ul class="list-inline">
           <li>
             <a href="https://github.com/Teruko83" target="_blank">
@@ -46,21 +80,41 @@
           </li>
           <li>
             <a href="https://twitter.com/LeWagonMontreal" target="_blank">
-            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-linkedin"></i>
             </a>
           </li>
-          <li>
+       <!--    <li>
             <a href="https://facebook.com/lewagoncanada" target="_blank">
             <i class="fab fa-facebook"></i>
             </a>
-          </li>
+          </li> -->
         </ul>
-        </div>
       </div>
-  </body>
+    </div>
+
+
+  <script >
+document.addEventListener("keyup", (event) => {
+  const player1 = document.querySelector("#player1_race td.active");
+  const player2 = document.querySelector("#player2_race td.active");
+  if (event.keyCode === 65 && player1.nextElementSibling) {
+    const future1 = player1.nextElementSibling;
+    player1.classList.remove("active");
+    future1.classList.add("active");
+  } else if (event.keyCode === 80 && player2.nextElementSibling) {
+    const future2 = player2.nextElementSibling;
+    player2.classList.remove("active");
+    future2.classList.add("active");
+  } else if (!player1.nextElementSibling) {
+    alert("Baby Yoda wins!");
+    window.location = window.location;
+  } else if (!player2.nextElementSibling) {
+    alert("Baby Groot wins!");
+    window.location = window.location;
+  }
+});</script>
+ </body>
 </html>
-
-
 
 
 
