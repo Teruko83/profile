@@ -13,7 +13,7 @@
      <body>
       <h2 class="text-center">Do the race! Press A or P Key! </h2>
    <hr>
-   <!-- You race HTML code here -->
+   <!-- My race HTML code here -->
    <table class="racer_table">
      <tr id="player1_race">
        <td class="active"></td>
@@ -74,7 +74,7 @@
             <div>
               <img class="img-radius" src="./images/aurelie_NB.png" width="200px" alt="Aurelie Mathys">
             </div>
-            <div id="text_story">
+            <div class="padding-left">
               <h3>My story</h3>
               <p>I have 10 years experience in communication and marketing,
                 especially in copywriting and business strategy.
@@ -82,14 +82,13 @@
               </p>
             </div>
           </div>
-
       </div>
 
       <div class="card-white">
         <h3>My work</h3>
           <ul class='list-inline'>
             <li><a href="https://babynb.herokuapp.com/" target=_blank>Baby & B</a></li>
-            <li><a href="https://thomas-tracking.herokuapp.com/" target=_blank class="btn-black">Thomas tracking</a></li>
+            <li><a href="https://thomas-tracking.herokuapp.com/" target=_blank>Thomas tracking</a></li>
           </ul>
       </div>
 
@@ -102,7 +101,7 @@
             </a>
           </li>
           <li>
-            <a href="www.linkedin.com/in/aurelie-mathys" target="_blank">
+            <a href="https://linkedin.com/in/aurelie-mathys" target="_blank">
             <i class="fab fa-linkedin"></i>
             </a>
           </li>
@@ -129,10 +128,10 @@ document.addEventListener("keyup", (event) => {
     player2.classList.remove("active");
     future2.classList.add("active");
   } else if (!player1.nextElementSibling) {
-    alert("Baby Yoda wins!");
+    alert("Baby Yoda won!");
     window.location = window.location;
   } else if (!player2.nextElementSibling) {
-    alert("Baby Groot wins!");
+    alert("Baby Vador won!");
     window.location = window.location;
   }
 });</script>

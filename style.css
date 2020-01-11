@@ -130,12 +130,12 @@ a:hover {
   padding-right: 10px;
 }
 
-
-/* Design adjustments using id (1% design remaining) */
-#text_story
-{
+.padding-left{
   padding-left: 20px;
 }
+
+/* Design adjustments using id (1% design remaining) */
+
 
 #introduction p {
   margin-bottom: 40px;
@@ -148,7 +148,7 @@ a:hover {
  height: 10px;
 }
 #player2_race td.active {
- background-image: url("images/player2.jpeg");
+ background-image: url("images/player2.png");
  height: 10px;
 }
 
