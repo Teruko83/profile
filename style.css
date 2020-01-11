@@ -44,6 +44,10 @@ a:hover {
   margin: 40px auto;
 }
 
+.flex {
+  display:flex;
+}
+
 .card-white {
   background-color: white;
   padding: 30px;
