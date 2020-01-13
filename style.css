@@ -149,7 +149,8 @@ a:hover {
 }
 #player2_race td.active {
  background-image: url("images/player2.png");
- height: 5px;
+ height: 10px;
+ object-fit: cover;
 }
 
 @media (max-width: 960px) {
